@@ -1,0 +1,6 @@
+Django==5.2.6
+djangorestframework
+drf-yasg
+mysqlclient
+django-environ
+django-cors-headers
