@@ -63,12 +63,12 @@ WSGI_APPLICATION = "alx_travel_app.wsgi.application"
 # Database
 DATABASES = {
     "default": {
-        "ENGINE": env("DB_ENGINE"),
+        "ENGINE":'django.db.backends.mysql',
         "NAME": env("DB_NAME"),
         "USER": env("DB_USER"),
         "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT"),
+        "HOST": env("DB_HOST",default='localhost'),
+        "PORT": env("DB_PORT",default='3306'),
     }
 }
 
@@ -99,5 +99,25 @@ REST_FRAMEWORK = {
 # CORS
 CORS_ALLOW_ALL_ORIGINS = True
 
+# CORS configuration
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 # Celery
 CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+
+# Celery Configuration
+CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_RESULT_BACKEND = 'rpc://'
+
+# Swagger Settings
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        }
+    },
+    'USE_SESSION_AUTH': False,
+}

@@ -1,0 +1,36 @@
+# Create .gitignore
+cat > .gitignore << 'EOL'
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Static files
+staticfiles/
+
+# Database
+*.db
+EOL
