@@ -33,5 +33,9 @@ celery>=5.0,<6.0
 django-environ>=0.9,<1.0
 drf-yasg>=1.21,<2.0
 mysqlclient>=2.1,<3.0
+<<<<<<< HEAD
 rabbitmq-server  # Note: This is usually installed via system package manager
 >>>>>>> 797fbbb7 (Complete project setup with MySQL, Swagger, and REST API configuration)
+=======
+
+>>>>>>> 743088ee (Fix typo in urls.py and validate required files)
